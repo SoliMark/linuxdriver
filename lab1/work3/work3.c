@@ -9,14 +9,14 @@ MODULE_LICENSE("Dual BSD/GPL");
 
 static int getpid_init(void)
 {
-    struct task_struct *task,*p;
+    struct task_struct *task,*entry;
     struct list_head *ps;
     printk("begin.\n");
     task=&init_task;
     list_for_each(ps,&task->tasks)
     {
-        p=list_entry(ps,struct task_struct,tasks);
-        printk("%d\t%s\n",p->pid,p->comm);
+        entry=list_entry(ps,struct task_struct,tasks);
+        printk("%d\t%s\n",entry->pid,entry->comm);
     }
     return 0;
 
