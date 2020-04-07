@@ -38,7 +38,7 @@ int main(void)
 
 	fd = open_file();
 
-	sleep(20);
+	sleep(2);
 
 	close_file(fd);
 
