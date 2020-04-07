@@ -6,3 +6,4 @@
 *.mod.c
 *.out
 .driver.*
+*.cmd
