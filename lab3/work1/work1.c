@@ -9,7 +9,7 @@
 #define SCHED_IDLE              5
 #define SCHED_DEADLINE          6
 */
-asmlinkage long work1(void){
+asmlinkage long sys_work1(void){
 	printk("pid is %d\n",current->pid);
 	char policy[7][20]{"SCHED_NORMAL","SCHED_FIFO","SCHED_BATCH","reserved","SCHED_IDLE","SCHED_DEADLINE"};
 	printk("schedule policy is %s",policy[current->policy]);
