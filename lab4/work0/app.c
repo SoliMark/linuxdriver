@@ -55,7 +55,12 @@ int main(void)
     read_buffer(fd);
 
     memset(&cmd, 0, sizeof(cmd));
-    cmd.val = 0xCC;
+    unsigned int input;
+    printf("input: \n");
+    scanf("%x[^0x]",&input);
+    //printf("%02x \n", input);
+    //cmd.val = 0xCC;
+    cmd.val=input; 
     ret = ioctl(fd, IOCTL_VALSET, &cmd);
     if (ret == -1) {
         printf("errno %d\n", errno);
