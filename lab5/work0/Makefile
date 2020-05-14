@@ -5,6 +5,6 @@ all:
 	gcc blk.c -o blk.out
 	gcc nonblk.c -o nonblk.out
 	gcc poll.c -o poll.out
-	gcc select.c -o selec.out
+	gcc select.c -o select.out
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
