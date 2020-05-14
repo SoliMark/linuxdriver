@@ -8,3 +8,4 @@ all:
 	gcc select.c -o select.out
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	rm *.out
